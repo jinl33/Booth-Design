@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import FrameComponent from "../components/FrameComponent";
 import FrameComponent1 from "../components/FrameComponent1";
 
-const Root1: FunctionComponent = () => {
+const Regulations: FunctionComponent = () => {
   return (
     <div className="w-full relative bg-background-default-default overflow-hidden flex flex-col items-start justify-start pt-[26px] px-[21px] pb-[42px] box-border gap-[11px] leading-[normal] tracking-[normal] text-left text-2xl text-miscellaneous-floating-tab-text-unselected font-body-small">
       <div className="w-[614px] flex flex-row items-start justify-between gap-5 max-w-full mq450:flex-wrap">
@@ -32,4 +32,4 @@ const Root1: FunctionComponent = () => {
   );
 };
 
-export default Root1;
+export default Regulations;

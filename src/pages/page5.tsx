@@ -1,21 +1,28 @@
 import { FunctionComponent, useCallback } from "react";
+import { Link } from "react-router-dom";
 import MenuSeparator from "../components/MenuSeparator";
 import MenuShortcut from "../components/MenuShortcut";
 import InputField from "../components/InputField";
 import TabBarIPad from "../components/TabBarIPad";
+// import Viewer from "./viewer";
 
-const Root: FunctionComponent = () => {
+const Page: FunctionComponent = () => {
   const onBUTTONContainerClick = useCallback(() => {
     window.open("/regulations");
   }, []);
 
   return (
     <div className="w-full h-[483px] relative bg-background-default-default overflow-hidden leading-[normal] tracking-[normal] text-left text-xs text-background-default-default font-body-small">
-      <img
-        className="absolute top-[75px] left-[15px] w-[454px] h-[408px] object-cover"
-        alt=""
-        src="/image-2@2x.png"
-      />
+      {/* <Link to="/viewer"> */}
+        <div className="absolute top-[75px] left-[15px] w-[454px] h-[408px] cursor-pointer">
+          {/* <Viewer /> */}
+          <img
+            className="absolute top-[75px] left-[15px] w-[454px] h-[408px] object-cover"
+            alt=""
+            src="/image-2@2x.png"
+          />
+        </div>
+      {/* </Link> */}
       <form className="m-0 absolute top-[18px] left-[483px] w-[189px] h-[457.8px] flex flex-col items-end justify-start gap-[19px]">
         <button className="cursor-pointer [border:none] py-[11px] pl-[9px] pr-[7px] bg-darkgray rounded-981xl flex flex-row items-start justify-start hover:bg-gray">
           <div className="h-[38px] w-[65px] relative rounded-981xl bg-darkgray hidden" />
@@ -318,4 +325,4 @@ const Root: FunctionComponent = () => {
   );
 };
 
-export default Root;
+export default Page;
